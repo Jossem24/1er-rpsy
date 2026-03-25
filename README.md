@@ -7,3 +7,6 @@ Este projeto faz cálculos simples de:
 - Margem de lucro
 
 ## Como executar
+
+```bash
+python src/git.py
