@@ -1,7 +1,8 @@
 def calcular_lucro(receita, custo):
     return receita - custo
 
-
+# Aqui não se precisa de elif ou else porque se o if é verdadeiro não vai pra linhas de embaixo
+   
 def calcular_margem(receita, custo):
     if receita == 0:
         return 0
