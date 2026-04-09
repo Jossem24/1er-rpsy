@@ -23,7 +23,7 @@ suport_caminhoes = 12
 total_caminhoes = caixas // suport_caminhoes
 sob_caixas = caixas % suport_caminhoes
 
-print("Poderão ir", total_caminhoes, "totalmente cheios")
+print("Poderão ir", total_caminhoes, "caminhoes totalmente cheios")
 print("As caixas que sobraram são", sob_caixas)
 
 
