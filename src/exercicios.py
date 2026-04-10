@@ -20,7 +20,7 @@ def obter_dados():
 
 
 while True:
-    print("\n1 - Calcular lucro")
+    print("n/1 - Calcular lucro")
     print("2 - Ver margem")
     print("3 - Sair")
 
