@@ -1,3 +1,8 @@
+
+
+
+
+
 print ("Hola, qual é seu nome? ")
 nome = input("")
 print("BEM VINDA", nome)
@@ -66,4 +71,3 @@ while True :
         break
     else :
         print("Volte pronto, muito obrigado")
-        
