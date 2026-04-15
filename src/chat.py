@@ -1,11 +1,11 @@
-def validar_numero(): 
+def validar_numero():#---------------------------Função executavel mas sem While true
     try: #------------------------------- -------Diz ao programa que rode isso (serve em caso achar que vai dar erro)
-        return int(input("Digite o numero: "))
+        return int(input("Digite o numero: "))#--Return para TODA a função
     except:                                      #Se tentou-se o try e não funcionou, este comando em vez de dar erro no programa, da erro em forma de informação ao usuario
         print("Entrada Inválida")                #Dizendo que é uma entrada invalida e manda para a seguinte def/função
         return None                              #return é para encerrar função e passar a seguinte      
-
-                                                  
+                                                 #Resumo: Se define a função validar numero, nela primeiro se tenta(try) fazer um retorno de um input int ao usuario 
+                                                 #caso o usuario digite algo que não é int, se executa except e mostra o print, depois o return faz continuar para o seguinte da funcção inicio o foi o que chamo a esta função                                            
 
 
 
