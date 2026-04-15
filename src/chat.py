@@ -65,18 +65,13 @@ def inicio():
     nome = input()
     print("BEM VINDA", nome)
 
-    input("O que precisa? ")
+    input("O que precisa? ")            #Ao usuario responder a pergunta, igualmente segue o fluxo que leva ao restaurante, corregir depois
 
-    print("Escribe 51")
-    numero = validar_numero()
-    verificar_manguito(numero)
+    print("Escribe 51")                 #Ao usuario digitar 51, independentemente do que digite, vai levar ao menu do restaurante
+    numero = validar_numero()           #Aqui chama a def/função de validar menu
+    verificar_manguito(numero)          #Aqui chama a def/função de verificarmanguito
 
-    menu_restaurante()
-
-
-    inicio()
+    menu_restaurante()                  #Aqui chama a def/função menu restaurante
 
 
-
-
-
+inicio()
