@@ -1,6 +1,6 @@
 def validar_numero():#---------------------------Função executavel mas sem While true
     try: #------------------------------- -------Diz ao programa que rode isso (serve em caso achar que vai dar erro)
-        return int(input("Digite o numero: "))#--Return para TODA a função
+        return int(input("Digite o numero: "))#--Return encerra TODA a função, acaba como o que o return tem, seja um input, seja um none
     except:                                      #Se tentou-se o try e não funcionou, este comando em vez de dar erro no programa, da erro em forma de informação ao usuario
         print("Entrada Inválida")                #Dizendo que é uma entrada invalida e manda para a seguinte def/função
         return None                              #return é para encerrar função e passar a seguinte      
