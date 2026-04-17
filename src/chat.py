@@ -88,3 +88,4 @@ def inicio():                           #Começo do codigo para o usuario, isto 
 
 
 inicio()                                #Isto faz com que o programa comece a rodar, porque ta chamado a def/função 0
+                                        # O parentesis () chama a função

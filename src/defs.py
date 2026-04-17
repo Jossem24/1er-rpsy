@@ -23,3 +23,13 @@ def dobrar():
 f = dobrar()
 
 print(f)
+
+
+def saudar():
+    return input("Digite seu nome: ")
+
+saludo = saudar()
+
+print ("BEM VINDO", saludo)
+    
+
