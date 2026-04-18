@@ -1,3 +1,6 @@
+#primer intento meu de funcoes
+
+
 def validar_numero():
     try:
         return int(input("Digite o numero: "))
@@ -74,8 +77,7 @@ def inicio():
     menu_restaurante()
 
 
-    inicio()
-
+inicio()
 
 
 
