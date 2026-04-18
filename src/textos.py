@@ -1,3 +1,9 @@
+#Textos
+
+
+
+
+
 faturamento = 1000
 custo = 200
 

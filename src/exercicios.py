@@ -20,9 +20,9 @@ def obter_dados():
 
 
 while True:
-    print("n/1 - Calcular lucro")
+    print("1 - Calcular lucro")
     print("2 - Ver margem")
-    print("3 - Sair")
+    print("3 - Sair") 
 
     opcao = input("Escolha uma opcao: ")
 

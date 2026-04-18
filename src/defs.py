@@ -13,10 +13,6 @@ print(x)
 
 
 
-
-
-
-
 def dobrar():
     return 10 * 2  # calcula mas joga fora
 

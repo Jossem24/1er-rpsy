@@ -1,3 +1,8 @@
+#exercicios para ir adiccionando
+
+
+
+
 def validar_numero():#---------------------------Função executavel mas sem While true
     try: #------------------------------- -------Diz ao programa que rode isso (serve em caso achar que vai dar erro)
         return int(input("Digite o numero: "))#--Return encerra TODA a função, acaba como o que o return tem, seja um input, seja um none
