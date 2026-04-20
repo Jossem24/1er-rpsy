@@ -20,4 +20,14 @@ resultado = mira_calculo (int (input()), int (input()))
 print (resultado)
 
 
-#
+#V3 função com try
+def creando_try (q, e) :
+    try :
+      q = 52
+      e = 40 
+      operação = q + e
+      return print(operação)
+    except :
+       print("Error")
+       return None
+creando_try (52,40)

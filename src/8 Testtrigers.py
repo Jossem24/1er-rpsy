@@ -1,20 +1,17 @@
 def peru_anadas() :
-    
- x = int(input())
- y = int(input()) 
+    try: 
+
+        x = int(input("Digite numero: "))
+        y = int(input("Digite o outro numero: ")) 
+        resultado = x + y
+        print(resultado)            
+        return resultado
+   
+    except: 
+        print("Erro")
+        return None
 
 
- resultado = x + y
 
- print(resultado)
- return resultado
-peru_anadas ()
-
-
-def mira_calculo (a, b) :
-    
-    return a + b
-    
-resultado = mira_calculo (int (input()), int (input()))
-print (resultado)
+peru_anadas()
 
