@@ -18,3 +18,6 @@ def mira_calculo (a, b) :
     
 resultado = mira_calculo (int (input()), int (input()))
 print (resultado)
+
+
+#

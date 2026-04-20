@@ -3,8 +3,8 @@
 Este projeto faz cálculos simples de:
 
 - Lucro
-- Imposto
-- Margem de lucro
+- Funções
+
 
 ## Como executar
 
