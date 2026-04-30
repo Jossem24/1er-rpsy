@@ -89,3 +89,18 @@ def escoger():
             except ValueError:
                     print("Tenta de novo")
 escoger()
+
+#V7 Para multiplicar
+num = int(input("Dame un numero: "))
+for o in range(1, 11):
+    
+    print(o, "x", num, "=", num * o )
+
+#V8 Para pedir senha até achar a correta
+while pss != 1234:
+    print("Senha incorreta")
+    print("Digite novamente")
+    pss = int(input("Digite sua senha: "))
+
+print("Senha correta")       
+

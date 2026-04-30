@@ -65,20 +65,50 @@
 #    print("Reeprovado")     
 
 #4.7 
-for i in range(1, 6):
-    print( i )
+# for a in range(1, 6): 
+#     print( a )
 
-for i in range(3):
-    print("python")
+# for b in range(3):
+#     print("python")
 
-numero = 1
-while numero <= 5:
-    print(numero)
-    numero = numero + 1
+# numero = 1
+# while numero <= 5:
+#     print(numero)
+#     numero = numero + 1
+
+# #4.8 
+# for numero in range(1, 6):
+#     if numero == 4:
+#        break
+       
+#     print(numero)
+
+# for i in range(1, 6):
+#     if i == 3:
+     
+#      continue  
+
+#     print(i)  
 
 
+# for p in range(1, 6):
+#     if p == 2:
+#         pass
+
+#     print(p)
 
 
+# #4.9
+# eu = "jose jose seminario carrion"
+# print(eu)
+
+# pala = "python"
+# print(pala[0])
+# print(pala[5])
+
+# var = input("Dime una palavra: ")
+# print(var.lower())
+# print(var.upper())
 
 
 
