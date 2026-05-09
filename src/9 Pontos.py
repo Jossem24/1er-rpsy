@@ -98,7 +98,7 @@ for p in range(1, 6):
     print(p)
 
 
-#4.9
+#4.9  Strings
 eu = "jose jose seminario carrion"
 print(eu)
 
@@ -160,7 +160,18 @@ for i in range(3):
     print("Fim do boletim")
 
 
+#4.10  Listas
 
+caramelos = ["tentacion", "globopop", "chisitos"]
+print(caramelos)
+
+nomes = ["Luis", "jose", "matteo"]
+print(nomes[0], nomes[1], nomes[2])
+
+cores = ["azul", "verde"]
+cores.append("morado")
+cores[1] = "negro"
+print(cores)
 
 
 
