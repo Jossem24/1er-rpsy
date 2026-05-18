@@ -173,8 +173,50 @@ cores.append("morado")
 cores[1] = "negro"
 print(cores)
 
+#4.13 Sets
+
+nums = {1, 2 , 2, 3, 4, 4, 5}
+print(nums)
+print(len(nums))
 
 
+
+nome_1 = input("Digite um nome: ")
+nome_2 = input("Digite um nome diferente: ")
+nome_3  = input("Digite um nome diferente: ")
+
+nomes = {nome_1, nome_2, nome_3}
+print(nomes)
+
+
+a = {1, 2, 3, 4}
+b = {3, 4, 5, 6}
+
+print(a & b)
+print(a)
+print(b)
+
+
+#4.14 funcoes 
+def mensagem ():
+    print("estou aprendendo python")
+mensagem() 
+mensagem()
+def dobro (numero):
+    print(numero * 2)
+dobro(8)
+dobro(10)
+def boletim(nome, nota1, nota2):
+    media = (nota1 + nota2) / 2
+    print(nome)
+    print(media)
+
+    if media >= 7:
+        print("Aprovado, parabens")
+    else:
+        print("Reprovado")
+
+boletim("Jose", 8, 6)
 
 
 

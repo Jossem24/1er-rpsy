@@ -90,7 +90,7 @@ def escoger():
                     print("Tenta de novo")
 escoger()
 
-#V7 Para multiplicar
+#V7 Para tabela de multiplicar
 num = int(input("Dame un numero: "))
 for o in range(1, 11):
     
