@@ -218,8 +218,26 @@ def boletim(nome, nota1, nota2):
 
 boletim("Jose", 8, 6)
 
+#4.15 parametros, retorno e escopo
+def triplo(numero):
+    return numero * 3
 
+resul = triplo(2) 
+print(resul)
+def media(nota1, nota2):
 
+    nota1 = int(input("Digite sua primeira nota: "))
+    nota2 = int(input("Digite sua primeira nota: "))
+    return int((nota1 + nota2)) / 2
+resultado = media(0, 0)
+print("Seu promedio é", resultado)
+def maior_idade(idade):
+
+   print( num >= 18 )
+  
+num = int(input("Me fala sua idade: "))
+maior_idade(0)
+print(num)
 
 
 
