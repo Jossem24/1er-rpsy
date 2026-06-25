@@ -1,41 +1,32 @@
-def mostrar_nome(nome):
-    print("Seu nome é ", nome)
+try:
 
-a = input("Qual é seu nome?: ") 
-mostrar_nome(a)   
+    num = int(input("Me da un numero: "))
+    print("Seu numero é: ", num)
+except:
 
-b = input("Qual é seu nome?: ")
-mostrar_nome(b)
+    print("Valor errado")
 
+ 
+try :
 
-def mostrar_media(nota1, nota2):
-    media = (nota1 + nota2) / 2
-    print("Sua media é:", media)
+    num_1 = int(input("Me da um numero: "))
+    num_2 = int(input("Me da outro numero: "))
+    soma = num_1 + num_2
+    print("A soma é: ", soma)
+except :
 
-x = int(input("Me da sua primeira nota: "))
-y = int(input("Me da sua segunda nota: "))
-mostrar_media(x,y)
-
-
-a = int(input("Me da sua primeira nota:"))
-b = int(input("Me da sua segunda nota:"))
-mostrar_media(a,b)
+    print("Voce digitou errado")             
 
 
-def situacao_aluno(nome, nota1, nota2):
-    prom =(nota1 + nota2) / 2
-    veri = "Aprovado" if prom >= 6 else "Desaprovado"
-    print("Seu nome é", nome)
-    print("Voce tem de promedio", prom )
-    print("Vocé tá", veri)
-
-x = input("Qual é seu nome?: ") 
-y = int(input("Me da sua primeira nota: "))
-z = int(input("Me da sua segunda nota: ")) 
-situacao_aluno(x, y, z)   
+try:
+     
 
 
-a = input("Qual é seu nome?: ") 
-b = int(input("Me da sua primeira nota: "))
-c = int(input("Me da sua segunda nota: ")) 
-situacao_aluno(a, b, c)   
+ num_1 = int(input("Me da um numero: "))
+ divi = 10 / num_1 
+ print("A divisão é: ", divi)
+
+except ZeroDivisionError:
+ print("Não se pode digitar por zero")
+except:
+ print("Não didigitou corretamente")    
