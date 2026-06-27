@@ -291,9 +291,93 @@ b = int(input("Me da sua primeira nota: "))
 c = int(input("Me da sua segunda nota: ")) 
 situacao_aluno(a, b, c)   
 
+#4.17 try e except 
+
+try:
+
+    num = int(input("Me da un numero: "))
+    print("Seu numero é: ", num)
+except:
+
+    print("Valor errado")
+
+ 
+try :
+
+    num_1 = int(input("Me da um numero: "))
+    num_2 = int(input("Me da outro numero: "))
+    soma = num_1 + num_2
+    print("A soma é: ", soma)
+except :
+
+    print("Voce digitou errado")             
 
 
+try:
+     
 
 
+ num_1 = int(input("Me da um numero: "))
+ divi = 10 / num_1 
+ print("A divisão é: ", divi)
+
+except ZeroDivisionError:
+ print("Não se pode digitar por zero")
+except:
+ print("Não didigitou corretamente")    
 
 
+#4.18 biblioteca e modulos 
+
+import math #math é um modulo
+print(math.sqrt(25)) #da raiz cuadrada
+
+import random
+print(random.randint(1, 10)) #mostra um numero ao azar dentro do intervalo
+
+
+import math
+print(math.sqrt(81))
+
+import random
+print(random.randint(1, 5))
+
+import math
+num = int(input("Me da um numero: "))
+print(math.sqrt(num))
+print(num * num)
+
+
+#4.19 From e import
+
+import math
+print(math.sqrt(49))
+
+from math import sqrt
+print(sqrt(64))
+
+from math import sqrt
+num = int(input("Me da um numero: "))
+print(sqrt(num))
+
+#4.20 arquivos .txt
+
+arquivo = open("meu_texto.txt", "w")
+arquivo.write("Estou aprendendo python")
+arquivo.close()
+
+arquivo = open("meu_texto.txt", "r")
+lendo = arquivo.read()
+print(lendo)
+arquivo.close()
+
+
+nome = input("Me da seu nome: ")
+arquivo = open("nome.txt", "w")
+arquivo.write(nome)
+arquivo.close()
+
+arquivo = open("nome.txt", "r")
+mostra = arquivo.read()
+print(mostra)
+arquivo.close()

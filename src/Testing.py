@@ -1,32 +1,30 @@
-try:
+#w é escrita, r é ler
+arquivo = open("texto.txt", "w") #Cria ou abre o arquivo
+arquivo.write("Ola mundo") #write coloca o texto do parentesis no arquivo
+arquivo.close()#fecha o arquivo
 
-    num = int(input("Me da un numero: "))
-    print("Seu numero é: ", num)
-except:
-
-    print("Valor errado")
-
- 
-try :
-
-    num_1 = int(input("Me da um numero: "))
-    num_2 = int(input("Me da outro numero: "))
-    soma = num_1 + num_2
-    print("A soma é: ", soma)
-except :
-
-    print("Voce digitou errado")             
+arquivo = open("texto.txt", "r") #Abre o arquivo para ler
+conteudo = arquivo.read() #Pega tudo o conteudo do arquivo e guarda na VAR conteudo
+print(conteudo)
+arquivo.close() #fecha o arquivo
 
 
-try:
-     
+arquivo = open("meu_texto.txt", "w")
+arquivo.write("Estou aprendendo python")
+arquivo.close()
+
+arquivo = open("meu_texto.txt", "r")
+lendo = arquivo.read()
+print(lendo)
+arquivo.close()
 
 
- num_1 = int(input("Me da um numero: "))
- divi = 10 / num_1 
- print("A divisão é: ", divi)
+nome = input("Me da seu nome: ")
+arquivo = open("nome.txt", "w")
+arquivo.write(nome)
+arquivo.close()
 
-except ZeroDivisionError:
- print("Não se pode digitar por zero")
-except:
- print("Não didigitou corretamente")    
+arquivo = open("nome.txt", "r")
+mostra = arquivo.read()
+print(mostra)
+arquivo.close()
