@@ -381,3 +381,5 @@ arquivo = open("nome.txt", "r")
 mostra = arquivo.read()
 print(mostra)
 arquivo.close()
+
+#4.21 strings, listas e diccionarios
