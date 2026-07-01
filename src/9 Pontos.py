@@ -430,6 +430,69 @@ dos = [ 4 , 6 ,7, 8, 37]
 tres = list(map(lambda y : y * 3, dos))
 print(tres)
 
-cuatro = [1, 2, 3, 4, 5, 6]
-cinco = list(filter(lambda z : z >3, cuatro))
+cuatro = [1, 2, 3, 4, 5, 6] #lista
+cinco = list(filter(lambda z : z >3, cuatro)) #da lista, mostra valores maiores do que 3
 print(cinco)
+
+#4.24 datas, hora e uso de datetime
+
+from datetime import datetime
+uno = datetime.now()
+print(uno)
+
+from datetime import datetime
+dos = datetime.now()
+print(dos.day)
+print(dos.month)
+print(dos.year)
+
+from datetime import datetime
+tres = datetime.now()
+print(tres.hour)
+print(tres.minute)
+
+#4.25 classes e obj
+
+class Pessoa:
+    pass
+aluno = Pessoa()
+class Carro:
+    pass
+meu_carro = Carro()
+print(meu_carro)
+
+class Animal:
+    pass
+gato = Animal()
+class Casa:
+    pass
+lar = Casa()
+
+
+
+#4.26 metodos, atributos
+class pessoa:
+    def __init__(self, nome):
+        self.nome = nome
+loco = pessoa("Carrion")        
+print(loco.nome) #loco é o objeto e .nome o atributo    
+        
+
+class carro:
+    def __init__(self, marca, ano):
+        self.marca = marca
+        self.ano = ano        
+uno = carro("toyota", "2009")
+print(uno.marca)
+print(uno.ano)        
+
+
+class Aluno:
+    def __init__(self, nome, nota):
+        self.nome = nome
+        self.nota = nota
+    def mostrar(self):
+        print("Teu nome é:", self.nome)
+        print("Tua nota é:", self.nota)
+cinco = Aluno("jose", "18")
+Aluno.mostrar(cinco) 

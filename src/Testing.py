@@ -1,19 +1,47 @@
-# jogo = [5, 10, 80]
+class Pessoa:
+    def __init__(self, nome):
+        self.sdfd = nome
 
-# depois = list(map(lambda x : x * 10, jogo))
-# print(depois)
+aluno = Pessoa("Jose")#aluno é a referença do objeto, pessoa("jose")é o que cria o objt na memoria
+print(aluno.sdfd) 
 
-# numeros = [1, 2, 3, 4, 5]
-# pares = list(filter(lambda x : x % 2 == 0, numeros))
-# print(pares)
+class Pessoa:
+    def __init__(self, nome):
+        self.nome = nome
 
-uno = lambda x : x + 10
-print(uno(5))
+    def falar(self):
+        print("Ola, meu nome e", self.nome)
 
-dos = [ 4 , 6 ,7, 8, 37]
-tres = list(map(lambda y : y * 3, dos))
-print(tres)
+aluno = Pessoa("Jose")
+aluno.falar()
 
-cuatro = [1, 2, 3, 4, 5, 6]
-cinco = list(filter(lambda z : z >3, cuatro))
-print(cinco)
+
+
+
+
+class pessoa:
+    def __init__(self, nome):
+        self.nome = nome
+loco = pessoa("Carrion")        
+print(loco.nome) #loco é o objeto e .nome o atributo    
+        
+
+class carro:
+    def __init__(self, marca, ano):
+        self.marca = marca
+        self.ano = ano        
+uno = carro("toyota", "2009")
+print(uno.marca)
+print(uno.ano)        
+
+
+
+class Aluno:
+    def __init__(self, nome, nota):
+        self.nome = nome
+        self.nota = nota
+    def mostrar(self):
+        print("Teu nome é:", self.nome)
+        print("Tua nota é:", self.nota)
+cinco = Aluno("jose", "18")
+Aluno.mostrar(cinco)         
