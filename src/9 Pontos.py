@@ -383,3 +383,53 @@ print(mostra)
 arquivo.close()
 
 #4.21 strings, listas e diccionarios
+
+pessoa = {"nome": "Jose", "idade": 20}
+print(pessoa.keys()) #keys mostra chaves (nomes)
+print(pessoa.values()) #mostra valores (cantidades)
+
+
+texto = "PapAriLo"
+print(texto.upper())
+print(texto.lower())
+
+
+mercado = ["maca", "naranja", "banana"]
+mercado.append("mamao")
+mercado.remove("banana")
+print(mercado)
+
+
+nomes = { "nome" : "jose", "idade" : 19, "cidade" : "chiclayo" }
+print(nomes.keys())
+print(nomes.values())
+
+
+#4.22 list compreshion
+
+uno = []
+for i in range (1, 6):
+ uno.append(i)
+print(uno)
+
+dos = []
+for i in range (1, 6):
+ dos.append(i * 2)
+print(dos)
+
+tres = []
+for i in range (1, 7):
+    tres.append(i * i)
+print(tres)  
+
+#4.23 list, map, filter
+uno = lambda x : x + 10
+print(uno(5))
+
+dos = [ 4 , 6 ,7, 8, 37]
+tres = list(map(lambda y : y * 3, dos))
+print(tres)
+
+cuatro = [1, 2, 3, 4, 5, 6]
+cinco = list(filter(lambda z : z >3, cuatro))
+print(cinco)
