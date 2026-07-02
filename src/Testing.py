@@ -1,47 +1,42 @@
-class Pessoa:
-    def __init__(self, nome):
-        self.sdfd = nome
+# class Pessoa:  #Clase base
+#     def falar (self): #metodo falar
+#         print("Ola")
+# class Aluno(Pessoa): #Aluno hereda Pessoa
+#     pass
+# a = Aluno()
+# a.falar()
 
-aluno = Pessoa("Jose")#aluno é a referença do objeto, pessoa("jose")é o que cria o objt na memoria
-print(aluno.sdfd) 
-
-class Pessoa:
-    def __init__(self, nome):
-        self.nome = nome
-
-    def falar(self):
-        print("Ola, meu nome e", self.nome)
-
-aluno = Pessoa("Jose")
-aluno.falar()
+# class Conta:
+#     def __init__(self, saldo):
+#         self._saldo = saldo  # o _ avisa que é interno, privado, isso é encapsulamento
 
 
 
 
+class Animal :
+    def som(self):
+        print("Faz um som")
 
-class pessoa:
-    def __init__(self, nome):
-        self.nome = nome
-loco = pessoa("Carrion")        
-print(loco.nome) #loco é o objeto e .nome o atributo    
-        
+class Cachorro(Animal):
+    pass
 
-class carro:
-    def __init__(self, marca, ano):
-        self.marca = marca
-        self.ano = ano        
-uno = carro("toyota", "2009")
-print(uno.marca)
-print(uno.ano)        
+sonido = Cachorro() #não faz necessidade de chamar a classe cachorro com (Animal), só basta ()
+sonido.som()
 
 
+class Pessoa :
+    def __init__(self, nome) :
+        self._nome = nome
+uno = Pessoa("Juan")
+print(uno._nome)
 
-class Aluno:
-    def __init__(self, nome, nota):
-        self.nome = nome
-        self.nota = nota
-    def mostrar(self):
-        print("Teu nome é:", self.nome)
-        print("Tua nota é:", self.nota)
-cinco = Aluno("jose", "18")
-Aluno.mostrar(cinco)         
+
+class Vehiculo :
+    def andar (self):
+        print("O vehiculo está andando")
+
+class Moto(Vehiculo) :
+    pass
+
+dos = Moto()
+dos.andar()

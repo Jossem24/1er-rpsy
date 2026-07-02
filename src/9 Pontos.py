@@ -496,3 +496,26 @@ class Aluno:
         print("Tua nota é:", self.nota)
 cinco = Aluno("jose", "18")
 Aluno.mostrar(cinco) 
+
+#4.27 Heranca e encapsulamento
+class Animal :
+    def som(self):
+        print("Faz um som")
+class Cachorro(Animal):
+    pass
+sonido = Cachorro() #não faz necessidade de chamar a classe cachorro com (Animal), só basta ()
+sonido.som()
+
+class Pessoa :
+    def __init__(self, nome) :
+        self._nome = nome
+uno = Pessoa("Juan")
+print(uno._nome)
+
+class Vehiculo :
+    def andar (self):
+        print("O vehiculo está andando")
+class Moto(Vehiculo) :
+    pass
+dos = Moto()
+dos.andar()
