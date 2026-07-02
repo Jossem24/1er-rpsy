@@ -3,3 +3,4 @@ output/
 _pycache_/
 *.exe
 *.pyc
+venv/
