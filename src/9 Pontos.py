@@ -519,3 +519,20 @@ class Moto(Vehiculo) :
     pass
 dos = Moto()
 dos.andar()
+
+
+#4.29 Pacotes com pip(bibliotecas que não estão prontas no codigo)
+
+##pip install requests
+#pip chama ao gerenciador de pacotes
+#install o que queremos instalar
+#requests nome do pacote
+
+##import requests
+#depois da instlação usamos o modulo requests
+
+##pip list
+#mostra pacotes instalados
+
+##pip uninstall requests
+#desisntala o pacote
