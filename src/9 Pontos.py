@@ -329,7 +329,7 @@ except:
 
 #4.18 biblioteca e modulos 
 
-import math #math é um modulo
+import math #math é um modulo ou biblioteca
 print(math.sqrt(25)) #da raiz cuadrada
 
 import random
