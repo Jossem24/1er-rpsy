@@ -561,3 +561,32 @@ with open ("mercadoria.json", "w") as cajon:
 with open ("mercadoria.json", "r") as cajon:
     muestra = json.load(cajon)
     print(muestra)
+
+
+#4.31 APIs e Requests :
+
+import requests
+
+dados = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+reposta = dados.json()
+
+print(reposta)
+print(reposta["title"])
+
+
+#4.32 unnittest ou pytest
+
+import unittest #modulo unittest 
+
+def soma(a, b):
+    return a + b
+
+class TesteSoma(unittest.TestCase): #TestCase ta dentro do modulo unittest
+    #precisa-se que o metodo comece com "test_" para o testeador encontra-lo
+    def test_soma(self): #test_soma é um metodo e self é a referencia do objeto
+        self.assertEqual(soma(2, 3), 5) #asserEqual é um metodo d
+
+
+#se o valor de name é igual ao main, execute o bloco de abaixo (unittest.main)
+if __name__ == "__main__": #__name__ é uma var especial
+    unittest.main()
