@@ -536,3 +536,28 @@ dos.andar()
 
 ##pip uninstall requests
 #desisntala o pacote
+
+#4.30 ler e escrever arquivos .JSON
+
+import json
+
+humano = {
+
+    "nome" : "jose",
+    "idade" : 22
+}
+with open ("humano.json", "w") as caixa:
+    json.dump(humano, caixa) 
+with open ("humano.json", "r") as caixa:
+    dados = json.load(caixa)
+    print(dados)
+
+mercadoria = {  
+    "produto" : "iphone",
+    "preço" : 1000
+}
+with open ("mercadoria.json", "w") as cajon:
+    json.dump(mercadoria, cajon)
+with open ("mercadoria.json", "r") as cajon:
+    muestra = json.load(cajon)
+    print(muestra)

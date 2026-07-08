@@ -1,15 +1,13 @@
-import json
-
-humano = {
-
-    "nome" : "jose",
-    "idade" : 22
-}
+import requests
 
 
-with open ("humano.json", "w") as caixa:
-    json.dump(humano, caixa) 
 
-with open ("humano.json", "r") as caixa:
-    dados = json.load(caixa)
-    print(dados)
+resposta = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+
+dados = resposta.json()
+
+
+
+
+print(dados["title"]) 
+
