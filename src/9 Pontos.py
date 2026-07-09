@@ -590,3 +590,24 @@ class TesteSoma(unittest.TestCase): #TestCase ta dentro do modulo unittest
 #se o valor de name é igual ao main, execute o bloco de abaixo (unittest.main)
 if __name__ == "__main__": #__name__ é uma var especial
     unittest.main()
+    
+def maior_idade (idade):
+    return idade >= 18 
+
+class idade(unittest.TestCase):
+    def test_idade(self):
+        self.assertEqual(maior_idade(20), True)
+
+if __name__ == "__main__":
+    unittest.main()
+
+
+#4.33 boas praticas e legibilidade
+#explicar melhor variaveis
+#evitar nome sem sentido
+#indentação 
+#funções com uma tarefa geral no espicifico
+
+
+
+#4.34 estrutura de projetos

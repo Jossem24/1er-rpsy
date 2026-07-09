@@ -1,36 +1,20 @@
-import unittest
+a = 0
+b = 20
+c = a + b
 
-def dobro(x):
-    return x * 2
-
-class multiplicacion(unittest.TestCase):
-    def test_plicacion(self):
-        self.assertEqual(dobro(3), 6)
+print( c )
 
 
-if __name__ == "__main__":
-    unittest.main()
+
+nome = "Jose"
+idade = 19
+
+print(nome, idade)
 
 
-def soma (a, b):
-    return a + b
 
+def calc(altura, profundidade):
+ 
+    return altura + profundidade
 
-class novasoma(unittest.TestCase):
-    def test_soma(self):
-        self.assertEqual(soma(2, 5), 7)
-
-if __name__ == "__main__":
-    unittest.main()
-
-
-def maior_idade (idade):
-    return idade >= 18 
-
-class idade(unittest.TestCase):
-    def test_idade(self):
-        self.assertEqual(maior_idade(20), True)
-
-if __name__ == "__main__":
-    unittest.main()
-
+print(calc (2 , 3))
