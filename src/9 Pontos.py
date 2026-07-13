@@ -611,3 +611,10 @@ if __name__ == "__main__":
 
 
 #4.34 estrutura de projetos
+
+
+#4.35 debugging e leitura de tipos de erros
+#NameError
+#TypeError
+#ValueError
+#ZeroDivisorError
