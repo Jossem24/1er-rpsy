@@ -1,4 +1,4 @@
-# Meu Primeiro Projeto em Python
+# 1ros passos Python
 
 Este projeto faz cálculos simples de:
 
