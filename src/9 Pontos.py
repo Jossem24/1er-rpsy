@@ -565,13 +565,13 @@ with open ("mercadoria.json", "r") as cajon:
 
 #4.31 APIs e Requests :
 
-import requests
+# import requests
 
-dados = requests.get("https://jsonplaceholder.typicode.com/todos/1")
-reposta = dados.json()
+# dados = requests.get("https://jsonplaceholder.typicode.com/todos/1")
+# reposta = dados.json()
 
-print(reposta)
-print(reposta["title"])
+# print(reposta)
+# print(reposta["title"])
 
 
 #4.32 unnittest ou pytest
@@ -608,8 +608,6 @@ if __name__ == "__main__":
 #indentação 
 #funções com uma tarefa geral no espicifico
 
-
-
 #4.34 estrutura de projetos
 
 
@@ -617,4 +615,9 @@ if __name__ == "__main__":
 #NameError
 #TypeError
 #ValueError
-#ZeroDivisorError
+#ZeroDivisorError 
+
+
+
+
+############           FASE 2                 ##########
