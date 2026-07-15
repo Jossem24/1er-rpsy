@@ -621,3 +621,32 @@ if __name__ == "__main__":
 
 
 ############           FASE 2                 ##########
+
+
+
+#Ponto 3 SQL em python
+import sqlite3
+
+conexao = sqlite3.connect("Banco.bd")
+cursor = conexao.cursos()
+
+cursor.execute("CREATE TABLE IF NOT EXISTS usuarios (nome TEXT, idade INTEGER)")
+
+conexao.commit
+conexao.close()
+
+import sqlite3
+
+conexao = sqlite3.connect("banco.bd") # .cria ou abre o BD
+cursor = conexao.cursor() #cria o cursor, (obj que executa comandos SQL)
+
+cursor.execute("CREATE TABLE IF NOT EXISTS usaurios (nome TEXT, idade INTEGER)")
+cursor.execute("INSERT INTO usuarios (nome, idade) VALUES ('Marcos', 20)")
+cursor.execute("SELECT * FROM usuarios")
+
+
+dados = cursor.fetchall()
+print(dados)
+
+conexao.commit
+conexao.close()
