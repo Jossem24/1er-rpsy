@@ -644,9 +644,38 @@ cursor.execute("CREATE TABLE IF NOT EXISTS usaurios (nome TEXT, idade INTEGER)")
 cursor.execute("INSERT INTO usuarios (nome, idade) VALUES ('Marcos', 20)")
 cursor.execute("SELECT * FROM usuarios")
 
-
 dados = cursor.fetchall()
 print(dados)
-
 conexao.commit
+conexao.close()
+
+#Ponto 4: CRUD em python
+
+import sqlite3
+
+conexao = sqlite3.connect("banco.db")
+cursor = conexao.cursor()
+cursor.execute("INSERT INTO usuarios (nome, idade) VALUES ('paparilo', 22)")
+conexao.commit()
+conexao.close()
+
+import sqlite3
+
+conexao = sqlite3.connect("banco.db")
+cursor = conexao.cursor()
+cursor.execute("SELECT * FROM usuarios")
+dados = cursor.fetchall()
+print(dados)
+conexao.close()
+
+import sqlite3
+
+conexao = sqlite3.connect("banco.db")
+cursor = conexao.cursor()
+cursor.execute("UPDATE usuarios SET idade = 25 WHERE nome = 'jose'")
+cursor.execute("DELETE FROM usuarios WHERE nome = 'paparilo'")
+cursor.execute("SELECT * FROM usuarios")
+conexao.commit()
+dados = cursor.fetchall()
+print(dados)
 conexao.close()
