@@ -1,4 +1,5 @@
-import requests
+from flask import Flask
 
-resposta = requests.delete("https://jsonplaceholder.typicode.com/posts/1")
-print(resposta.status_code)
+app = Flask(__name__)
+
+@app.route("/")
