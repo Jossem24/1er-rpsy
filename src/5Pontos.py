@@ -679,3 +679,51 @@ conexao.commit()
 dados = cursor.fetchall()
 print(dados)
 conexao.close()
+
+#Ponto 5 - HTTP - GET-PUT-POST-DELETE
+
+import requests 
+resposta = requests.get("https://jsonplaceholder.typicode.com/posts/1")
+print(resposta.status_code)
+
+import requests
+dados = {
+ "title" : "Meu post",
+ "body" : "conteudo",
+ "userId" : 1
+}
+resposta = requests.post("https://jsonplaceholder.typicode.com/posts", json =dados)
+print(resposta.status_code)
+
+import requests
+dados = {
+ "id" : 1,
+ "title" : "Meu post",
+ "body" : "vestimentos",
+ "userId" : 1
+}
+resposta = requests.put("https://jsonplaceholder.typicode.com/posts/1", json =dados)
+print(resposta.status_code)
+import requests
+resposta = requests.delete("https://jsonplaceholder.typicode.com/posts/1")
+print(resposta.status_code)
+
+# Ponto 6 - FLASK
+
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def inicio():
+    return "Hola"
+if __name__ == "__main__":
+  app.run()
+
+# Ponto 7 - FLASK no HTML
+
+from flask import Flask, render_template
+app = Flask(__name__)
+@app.route("/")
+def inicio():
+    return render_template("sobre.html")
+if __name__ == "__main__":
+     app.run() 
