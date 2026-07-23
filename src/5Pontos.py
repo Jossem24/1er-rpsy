@@ -727,3 +727,25 @@ def inicio():
     return render_template("sobre.html")
 if __name__ == "__main__":
      app.run() 
+
+@app.route("/contato")
+def contato():
+     return render_template("contato.html")
+
+@app.route("/produto")
+def produto():
+     return render_template("produto.html")
+
+if __name__ == "__main__":
+     app.run()
+
+# Ponto 8 - Enviando dados de FLASK a HTML
+from flask import Flask, render_template
+
+app = Flask(__name__)
+@app.route("/produto")
+def produto():
+    return render_template("produto.html", produto="notebook", preco= 3500) 
+
+if __name__ == "__main__":
+    app.run()
