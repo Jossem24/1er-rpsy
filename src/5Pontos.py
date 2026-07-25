@@ -749,3 +749,34 @@ def produto():
 
 if __name__ == "__main__":
     app.run()
+
+# Ponto 9 - Formularios 
+#  py
+from flask import Flask, render_template, request
+app = Flask(__name__)
+@app.route("/perfil", methods=["GET", "POST"])
+def perfil():
+    if request.method == "POST":
+        nome = request.form["nome"]
+        idade = request.form["idade"]
+        cidade = request.form["cidade"]
+        dados = {"nome": nome, "idade": idade, "cidade": cidade}
+        return render_template("resultado.html",dados=dados)
+
+    return render_template("perfil.html")
+if __name__ == "__main__":
+    app.run()  
+#html 
+# <form action="/perfil" method="POST">
+#     <label for="nome">Nome:</label>
+#     <input id="nome" type="text" name="nome">
+#     <label for="idade">Idade:</label>
+#     <input id="idade" type="text" name="idade">
+#     <label for="cidade">Cidade:</label>
+#     <input id="cidade" type="text" name="cidade">
+#     <button type="submit">Enviar</button>
+# </form> 
+# html
+# <p>Nome: {{ dados.nome }}</p>
+# <p>Idade: {{ dados.idade }}</p>
+# <p>Cidade: {{ dados.cidade }}</p>        
