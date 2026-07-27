@@ -6,15 +6,15 @@ app = Flask(__name__) #coloquei mal: aspas no name e f minuscula no flask
 def calculadora():
     if request.method == "POST": #coloquei em {} e [] quando era so aspas
         num_1 = float(request.form["num_1"]) #esqueci do num_1 e num_2 nas aspas
-        num_2 = float(request.form["num_2"])
-        soma = (num_1 + num_2)
-        resta = (num_1 - num_2)
-        multi = (num_1 * num_2)
+        num_2 = float(request.form["num_2"]) #os request.form[""] conectam com o "name="num_1"
+        soma = num_1 + num_2
+        resta = num_1 - num_2
+        multi = num_1 * num_2
         media = (num_1 + num_2) / 2
         dados = {"num_1": num_1, "num_2": num_2, "soma": soma, "resta": resta, "multi": multi, "media": media}
 
-        return render_template("resultado_calculadora.html", dados=dados)#o primer dados é o nome que html usará e o 2do é a variavel
-    return render_template("mostragem.html")
+        return render_template("mostragem.html", dados=dados)#o primer dados é o nome que html usará e o 2do é a variavel
+    return render_template("resultado_calculadora.html")
 
 
 if __name__ == "__main__":

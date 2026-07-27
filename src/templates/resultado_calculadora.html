@@ -1,2 +1,15 @@
-<form action="/calculadora" method="POST">
-    <input type="number" name="num_1"> <!--coloquei int em vez de number-->
+<form  action="/calculadora" method="POST">
+    <label for="num_1">Primeiro numero </label>
+    <input type="number" id="num_1" name="num_1" step="any" required> <!--coloquei int em vez de number-->
+    <label for="num_2">Segundo numero </label>
+    <input type="number" id="num_2" name="num_2" step="any" required>
+    <button type="submit">Calcular </button>
+
+</form>  
+
+
+
+
+
+<!--id = conecta dentro da pagina-->
+<!--name = conecta dentro ao campo enviado -->
