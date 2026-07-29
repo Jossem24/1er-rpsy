@@ -1,0 +1,9 @@
+{% for aluno in alunos_1 %}
+      <p> {{aluno["nome"]|upper}} </p>
+      <p> {{aluno ["nota"]}}</p>
+      {% if aluno["nota"] >= 7 %}
+         <p> aprovado </p>
+        {%else%}
+          <p> reprovado</p>
+       {%endif%}
+{%endfor%}           

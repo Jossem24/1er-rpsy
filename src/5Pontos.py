@@ -834,7 +834,52 @@ if __name__ == "__main__":
 # </form>  
 
 #html mostragem
+
 # <p> soma:  {{dados["soma"]}} </p>
 # <p> resta: {{dados["resta"]}} </p>
 # <p> multi: {{dados["multi"]}} </p>
 # <p> media: {{dados["media"]}} </p>
+
+
+
+#Ponto 10 - Jinja
+
+from flask import Flask, render_template
+app = Flask(__name__)
+@app.route("/pessoa")
+def nomes():
+    idade = 17
+    nome = "maria"
+    return render_template("pessoa.html", idade=idade, nome=nome)
+if __name__ == "__main__":
+    app.run()
+# {{nome}}
+# {% if idade >= 18 %}
+#    <p> Maior de idade</p>
+# {%else%}
+#     <p> Menor de idade</p>
+# {%endif%} 
+
+
+
+from flask import Flask, render_template
+app = Flask(__name__)
+@app.route("/alunos")
+def alunos():
+    alunos_1 = [
+         {"nome": "jose", "nota": 7},
+         {"nome": "magus", "nota": 6},
+         {"nome": "pacha", "nota": 8},
+    ]
+    return render_template("alunos.html", alunos_1=alunos_1)
+if __name__ == "__main__":
+    app.run()
+# {% for aluno in alunos_1 %}
+#       <p> {{aluno["nome"]|upper}} </p>
+#       <p> {{aluno ["nota"]}}</p>
+#       {% if aluno["nota"] >= 7 %}
+#          <p> aprovado </p>
+#         {%else%}
+#           <p> reprovado</p>
+#        {%endif%}
+# {%endfor%}          
