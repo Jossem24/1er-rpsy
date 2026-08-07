@@ -1,48 +1,37 @@
-from flask import (
-    Flask,
-    redirect,
-    render_template,
-    request,
-    session,
-    url_for,
-)
-        
+from flask import ( Flask, render_template, request, session, url_for, redirect)
+
 app = Flask(__name__)
-app.secret_key = "chave-apenas-para-estudo" #.secret_key : espaço onde guardamos a chave secreta
+app.secret_key = "apenas-para-estudo"
 
-@app.route("/login", methods=["GET", "POST"]) # GET mostra form, POST recebe/envía dados
-def login():
-    erro = None
 
+
+
+@app.route("/login", methods=["GET", "POST"])
+def login(): 
     if request.method == "POST":
-        usuario = request.form["usuario"] #primeira declaração da variavel USUARIO, e ela é digitada no formulario pelo usuario
-                                          #e ali depois se cria o if de embaixo que pede que o valor de usurio seja Jose para a if se executar
-        senha = request.form["senha"]
+       usuario = request.form["usuario"]
+       senha = request.form["senha"]
 
-        if usuario == "jose" and senha == "1234": #verifica se as credenciais (jose e 1234)são corretas
-            session["usuario"] = usuario #guarde na sessão (session), no espaço chamado (["usuario"]) o valor da var (usuario) usuario
-            return redirect(url_for("painel")) #encontre a url a função painel (url_for("painel")), mande ao usu a outra pag (redirect) retorne tudo isso (return)
+       if usuario == "jose" and senha == "1234":
+            session["usuario"] = usuario
+            return redirect(url_for("painel"))
+       else:
+           mensagem = "Usuário ou senha incorretos" 
+           return render_template("login.html", mensagem=mensagem )            
+    return render_template("login.html")
 
-        erro = "Usuário ou senha incorretos" # se as credenciais não são corretas
-
-    return render_template("login.html", erro=erro) #é do primeiro if, se as credencias não são corretas
 
 @app.route("/painel")
 def painel():
-    if "usuario" not in session: #se o usuario não estiver logado
-        return redirect(url_for("login")) #manda (redirect) para o login
-
-    return render_template(         #se entrar mostra o painel (A bemvinda)
-        "painel.html",
-        usuario=session["usuario"], #pega o nome guardado em session["usuario"(o USUARIO)]
-    )
+    if "usuario" not in session: #cuidado com usuario sem aspas, porque usuario é uma var da função login e "usuario" é um valor geral
+        return redirect(url_for("login"))
+    return render_template("painel.html", usuario = session["usuario"])
 
 
-@app.route("/logout") # esta ruta se usa diretamente no html para o navegador encerrar session do usuario
-def logout():
-    session.pop("usuario", None) #remove ao usuario atual da session (session.pop)
-    return redirect(url_for("login")) #redirige ao login
-
+@app.route("/logout")
+def logout ():
+    session.pop("usuario", None)
+    return redirect(url_for("login"))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+     app.run()

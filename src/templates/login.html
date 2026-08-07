@@ -1,7 +1,7 @@
 <h1>Login</h1>
 
-{% if erro %}
-    <p>{{ erro }}</p>
+{% if mensagem %}
+    <p>{{ mensagem }}</p>
 {% endif %}
 
 <form action="/login" method="POST"> <!--form inicia formulario, action envia dados para rota /login, envia dados para que o primeiro if do flask o receba-->
