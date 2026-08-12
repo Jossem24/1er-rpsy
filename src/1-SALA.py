@@ -935,4 +935,100 @@ def logout():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
+
+#<h1>Login</h1>
+
+# {% if mensagem %}
+#     <p>{{ mensagem }}</p>
+# {% endif %}
+
+# <form action="/login" method="POST"> <!--form inicia formulario, action envia dados para rota /login, envia dados para que o primeiro if do flask o receba-->
+#     <label>Usuário:</label> <!-- label mostra texto -->
+#     <input type="text" name="usuario"> <!--input cria cmapo para escrever-->
+
+#     <label>Senha:</label>
+#     <input type="password" name="senha"> <!--type password esconde o digitado com ***, senha pega o valor no flask de request.form["senha"]-->
+
+#     <button type="submit">Entrar</button> <!--tyoe submit envia o ofrm atraves do button com nome Entrar-->
+# </form>
+
+
+
+#<h1>Olá, {{ usuario }}</h1>
+# <p>Você entrou no painel.</p>
+
+# <a href="/logout">Sair</a>
+
+
+
+#Ponto 12 
+
+from flask import (Flask, render_template, url_for, session, request, redirect )
+
+app = Flask(__name__)
+app.secret_key = "apenas-para-estudo"
+
+@app.route("/login", methods=["GET","POST"])
+def login():
+     if request.method == "POST":
+        usuario = request.form["usuario"]
+        senha = request.form["senha"]
+        if usuario == "jose" and senha == "1234":
+           session["usuario"] = usuario
+           return redirect(url_for("painel"))
+        else:
+            mensagem = "Usuario ou senha incorretos"
+            return render_template("login.html", mensagem= mensagem)     
+     return render_template("login.html")
+
+@app.route("/painel")
+def painel():
+    if "usuario" not in session:
+        return redirect(url_for("login"))
+    return render_template("painel.html", usuario = session["usuario"])
+
+@app.route("/logout")
+def logout():
+    session.pop("usuario", None)
+    return redirect(url_for("login"))
+
+
+if __name__ == "__main__":
+    app.run()   
+
+# <!DOCTYPE html>
+# <html lang="pt-br">
+# <head>
+#     <title>Primeiro paso </title> 
+# <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}"> 
+# </head>
+# <body> 
+# <h1> Login </h1>
+# {% if mensagem %}
+#     <p> {{mensagem}} </p>
+# {% endif %}    
+# <form action="/login" method="POST">
+#  <label> Usuario: </label>
+#  <input type="text" name="usuario">
+
+#  <label>Senha:</label>
+#  <input type="password" name="senha">
+#  <button type="submit"> Enviar </button>
+# </form>
+# </body>
+# </html>  
+# 
+# 
+# <!DOCTYPE html>
+# <html lang="pt-br">
+# <head>
+#     <title> Segundo passo</title>
+#     <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+# </head>
+# <body>
+# <h1> Benvindo {{usuario}}</h1>
+#  <p>Entrou no painel</p>
+# <a href="/logout">Sair</a> 
+# </body>
+# </html>      
