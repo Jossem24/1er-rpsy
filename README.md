@@ -1,9 +1,6 @@
 # 1ros passos Python
 
-Este projeto faz cálculos simples de:
-
-- Lucro
-- Funções
+Este projeto faz um aluno indo para intermediario
 
 
 ## Como executar

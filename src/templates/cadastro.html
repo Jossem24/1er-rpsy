@@ -1,10 +1,20 @@
-<form action="/cadastro" method="POST">
+{% if mensagem %}
+    <p>{{ mensagem }}</p>
+{% endif %}
+
+<h1> Cadastrar usuario </h1>
+
+<form action="/cadastro" method="post">
     <label>Nome:</label>
     <input type="text" name="nome">
-    
-    <button type="submit">Enviar</button>
 
-</form> 
+
+    <label>Idade</label>
+    <input type="number" name="idade">
+
+    <button type="submit"> Cadastrar </button>
+
+</form>
 
 
 
