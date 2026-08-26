@@ -1042,4 +1042,96 @@ if __name__ == "__main__":
 
 #Ponto 13
 
+import sqlite3
+from flask import Flask, render_template, url_for, redirect, request
+
+app = Flask(__name__)
+
+def criar_banco():
+    conexao = sqlite3.connect("banco.db")
+    cursor = conexao.cursor()
+
+    cursor.execute (
+              "CREATE TABLE IF NOT EXISTS usuarios"
+              "(nome TEXT, idade INTEGER)"
+
+    )
+
+    conexao.commit()
+    conexao.close()
+
+@app.route("/cadastro", methods = ["GET", "POST"])
+def cadastro():
+    if request.method == "POST":
+       nome = request.form["nome"]
+       idade = request.form["idade"]
+
+       conexao = sqlite3.connect("banco.db")
+       cursor = conexao.cursor()
+
+       cursor.execute(
+            "INSERT INTO usuarios(nome, idade) VALUES (?,?)",
+            (nome, idade),                       
+ 
+       )       
+       conexao.commit()
+       conexao.close()
+
+       return redirect(url_for("usuarios"))
+    return render_template("cadastro.html") 
+
+
+@app.route("/usuarios")
+def usuarios():
+    conexao = sqlite3.connect("banco.db")
+    cursor = conexao.cursor()
+
+    cursor.execute(
+         "SELECT nome, idade FROM usuarios")
+    dados = cursor.fetchall()
+    conexao.close()
+
+    return render_template("usuarios.html", dados=dados)
+
+
+if __name__ == "__main__":
+    criar_banco()
+    app.run()
+
+# {% if mensagem %}
+#     <p>{{ mensagem }}</p>
+# {% endif %}
+
+# <h1> Cadastrar usuario </h1>
+
+# <form action="/cadastro" method="post">
+#     <label>Nome:</label>
+#     <input type="text" name="nome">
+
+
+#     <label>Idade</label>
+#     <input type="number" name="idade">
+
+#     <button type="submit"> Cadastrar </button>
+
+# </form>
+
+
+# <!DOCTYPE html>
+# <html lang="pt-br">
+#  <head>
+#     <title> Usuarios Novos</title>
+    
+#  </head>
+#  <body>
+    
+#     <h2> usuarios cadastrados </h2>
+
+#     {% for usuario in dados %}
+#     <p>Nome: {{usuario[0]}}</p>
+#     <p>Idade: {{usuario[1]}}</p>
+#     {% endfor %}
+#     <a href="/cadastro"> Voltar ao cadastro</a> 
+#  </body>
+# </html>
 

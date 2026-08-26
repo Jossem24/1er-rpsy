@@ -1,81 +1,56 @@
 <!DOCTYPE html>
 <html>
-    <head>
-     <title> Inscrição para Curso de Programação</title>        
-    </head>
-    <body>
-       <header>
-           <h1 title="Primeiro">Trilha </h1>
-       </header>
-       <main>
-         <section>
-          <h2> Horário</h2>
-          <table>
-            <caption> Meu cronograma de estudos</caption>  
-            
-            <thead>
-                <tr>
-                    <th scope="col"> Curso </th>
-                    <th scope="col"> Professor</th>
-                    <th scope="col"> Hora</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Cálculo</td>
-                    <td>Lopez</td>
-                    <td>9am</td>
-                </tr>
-                
-                <tr>
-                    <td>Projetos Ger.</td>
-                    <td>Padilha</td>
-                    <td>11am</td>
-                </tr>
-                
-                <tr>
-                    <td>Programação</td>
-                    <td>segundo</td>
-                    <td>1pm</td>
-                </tr>
+ <head>
+    <title> Acesso ao uso </title>
+ </head>
+ <body>
+  <header>
+    <h1> cadastro</h1>
+  </header>
+  <main>
+    <section>
+      <form action="inscricao.html" method="post">
 
+        <label for="name">Nome: </label>
+        <input type="text" id="name" name="nome" required>
 
-            </tbody>
-          </table>
-         </section>
+        <label for="email"> Email: </label>
+        <input type="email" id="email" name="email" required>
 
-         <section>
-            <form action="inscricao.html" method="post">
-                <label for="email"> email</label>  
-                <input type="email" id="email" name="email"> 
+        <label for="senha"> Senha: </label>
+        <input type="password" id="senha" name="senha" required>
 
-                <label for="nome"> nome</label> 
-                <input type="text" id="nome" name="nome">
+        <label for="idade"> Idade: </label>
+        <input type="number" id="idade" name="idade">
 
-                <button type="submit">Enviar</button>
-            </form>
-            <a href="contato.html"> Mais informação <strong>aqui</strong></a>
-         </section>
-       </main>
-       <aside>
-        <img src="trilha.jpg" alt="Conteudo programado de estudos e repasso">
-        
-        <nav>
-            <a href="https://github.com">Portafolio</a><br>
-            <a href="https://instagram.com">Redes sociais</a>
-        </nav>
-        <ul>
-            <li> Pode <em>ajudar em compartilhar</em></li>
-            <li> Informe sobre avanços para conozco</li>
-        </ul>
-       </aside>
-       <hr>
-       <footer>
-        <p> José José/2026</p>
-       </footer>
-    </body>
+        <label for="data"> Data: </label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="quantidade"> Quantidade de participantes: </label>
+        <input type="number" id="quantidade" name="quantidade" required>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <a href="cadastro.html"> Fazer outro cadastro</a>
+    </section>
+    <section>
+        <h2> Regras do evento </h2>
+          <ul>
+            <li>Não levar coisas ilegais</li>
+            <li>Não alcohol</li>
+            <li>Não megafonos</li>
+          </ul> 
+    </section>
+    <img src="evento.jpg" alt="Evento pop 2026">
+  </main>
+  <aside>
+    <nav>
+       <a href="contato.html"> Para mais informações <br></a>
+       <a href="https://pagoseventos.com" target="_blank">Site para pagos</a>
+    </nav>
+  </aside>
+  <footer>
+       <p> Evento 2026<br> Organizado por Jóse José</p> 
+    </footer>
+ </body>
 </html>
-
-
-
-
