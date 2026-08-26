@@ -2,4 +2,13 @@
         <p>ID: {{ usuario [0]}}</p>
         <p>Nome: {{ usuario [1]}} </p>
         <p>Idade: {{ usuario [2]}} </p>
+        <form action="/editar/{{usuario[0]}}" method="get"> 
+              <button type="submit">Editar</button>
+       
+        </form>
+
+        <form action="/apagar/{{usuario[0]}}" method="post">
+             <button type="submit">Apagar</button>
+        </form>
 {%endfor%}
+
