@@ -272,35 +272,35 @@
 <!-- Exericicio 10 -->
 
 <div id="title">
-<h2> Novo mundo</h2>
-<p> Conheceram o novo<strong> mundo</strong></p>
-<ul>
-<li>Entrar</li><li>Jogar</li><li>Se divertir</li>
-</ul>
-<img src="Mundonovo.jpg" alt= "Este é o mundo novo">
+    <h2> Novo mundo</h2>
+    <p> Conheceram o novo<strong> mundo</strong></p>
+    <ul>
+    <li>Entrar</li><li>Jogar</li><li>Se divertir</li>
+    </ul>
+    <img src="Mundonovo.jpg" alt= "Este é o mundo novo">
 </div>
 
 
 
 <div id="plano">
-<h2>Meu plano</h2>
-<p>Começando que tudo tem que ver con fe e a mentalidade</p>
-<ol>
-<li>FÉ</li>
-<li>disciplina</li>
-<li>Renuncia</li>
-</ol>
+    <h2>Meu plano</h2>
+    <p>Começando que tudo tem que ver con fe e a mentalidade</p>
+    <ol>
+    <li>FÉ</li>
+    <li>disciplina</li>
+    <li>Renuncia</li>
+    </ol>
 </div>
-<hr>
+    <hr>
 <div id=ferramentas>
-<h2> Minhas ferramentas</h2>
-<p>Necessárias para avancar</p>
-<ul>
-<li>Deus</li>
-<li>Disciplina</li>
-<li>Amor</li>
-</ul>
-<a href= "https://artigo.com">Conheça mais de mim aqui</a>
+    <h2> Minhas ferramentas</h2>
+    <p>Necessárias para avancar</p>
+    <ul>
+    <li>Deus</li>
+    <li>Disciplina</li>
+    <li>Amor</li>
+    </ul>
+    <a href= "https://artigo.com">Conheça mais de mim aqui</a>
 </div>
 
 <!---------------------------------------------------------------------------------->
@@ -668,5 +668,144 @@
     </body>
 </html>
 
-<!-------------------------------PONTO 14------------------------------------------>
+<!------------------------------       PONTO 14    -------------------------------------->
+
+<!DOCTYPE html>
+<html>
+ <head>
+    <title> Acesso ao uso </title>
+ </head>
+ <body>
+  <header>
+    <h1> cadastro</h1>
+  </header>
+  <main>
+    <section>
+      <form action="inscricao.html" method="post">
+
+        <label for="name">Nome: </label>
+        <input type="text" id="name" name="nome" required>
+
+        <label for="email"> Email: </label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="senha"> Senha: </label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="idade"> Idade: </label>
+        <input type="number" id="idade" name="idade">
+
+        <label for="data"> Data: </label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="quantidade"> Quantidade de participantes: </label>
+        <input type="number" id="quantidade" name="quantidade" required>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <a href="cadastro.html"> Fazer outro cadastro</a>
+    </section>
+    <section>
+        <h2> Regras do evento </h2>
+          <ul>
+            <li>Não levar coisas ilegais</li>
+            <li>Não alcohol</li>
+            <li>Não megafonos</li>
+          </ul> 
+    </section>
+    <img src="evento.jpg" alt="Evento pop 2026">
+  </main>
+  <aside>
+    <nav>
+       <a href="contato.html"> Para mais informações <br></a>
+       <a href="https://pagoseventos.com" target="_blank">Site para pagos</a>
+    </nav>
+  </aside>
+  <footer>
+       <p> Evento 2026<br> Organizado por Jóse José</p> 
+    </footer>
+ </body>
+</html>
+
+
+<!--------------------------------     PONTO 15     ------------------------------>
+
+<form action="preferencias.html" method="post">
+   <label for="linguagens">Escolha uma linguagem:</label>
+     <select id="linguagens" name="linguagens" required>
+     <option value="html">HTML</option>
+     <option value="python">Python</option>
+     <option value="javascript">Javascript</option>
+     </select>
+
+   <label for="texto">Mensagem:</label>
+   <textarea id="texto" name="texto" required></textarea>
+
+   <button type="submit">Enviar</button>
+</form>                                  <!--  ao enviar o form, é enviado como linguagens=python(se seleccionar python)  -->
+
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>Curseira</title>
+    </head>
+    <body>
+    <header>
+        <h1> Escolha de cursos</h1>
+    </header>
+    <main>
+    <section>
+        <form action="formulario.html" method="post">
+
+            <label for="nome"> Nome: </label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email"> Email: </label>
+            <input type="email" id="email" name="email" required>
+            
+            <input type="radio" id="manha" name="horario" value="manha">
+            <label for="manha">Manha</label>
+
+            <input type="radio" id="tarde" name="horario" value="tarde">
+            <label for="tarde">Tarde</label>
+
+            <input type="radio" id="noite" name="horario" value="noite">
+            <label for="noite">Noite</label>
+            
+
+
+            <input type="checkbox" id="interesse0" name="interesses" value="python">
+            <label for="interesse0">python </label>
+
+            <input type="checkbox" id="interesse1" name="interesses" value="css">
+            <label for="interesse1">css </label>
+
+            <input type="checkbox" id="interesse2" name="interesses" value="java">
+            <label for="interesse2">java</label>
+            
+            <label for="cursos">Cursos: </label>
+            <select id="cursos" name="cursos"> 
+            <option value="ingles">ingles</option>
+            <option value="matematicas">Matematicas</option> 
+            <option value="lngua">Lingua</option>
+            </select>
+            
+
+            <label for="info">informação</label>
+            <textarea id="info" name="info" required></textarea>
+
+            <button type="submit">Enviar </button>
+        </form>
+    </section>
+        <a href="contato.html"> Mais informações </a> 
+    </main>
+    <footer>
+        <p> José José</p>
+        <p> 2026 </p>
+    </footer>
+    </body>
+    </html>
+
+    
+
 

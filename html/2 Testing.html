@@ -1,56 +1,105 @@
 <!DOCTYPE html>
-<html>
- <head>
-    <title> Acesso ao uso </title>
- </head>
+ <html>
+  <head>
+    <title> Conferencia </title>
+  </head>
  <body>
   <header>
-    <h1> cadastro</h1>
-  </header>
+  <h1> Realizar Inscrição</h1>
+ </header>
   <main>
     <section>
-      <form action="inscricao.html" method="post">
-
-        <label for="name">Nome: </label>
-        <input type="text" id="name" name="nome" required>
-
-        <label for="email"> Email: </label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="senha"> Senha: </label>
-        <input type="password" id="senha" name="senha" required>
-
-        <label for="idade"> Idade: </label>
-        <input type="number" id="idade" name="idade">
-
-        <label for="data"> Data: </label>
-        <input type="date" id="data" name="data" required>
-
-        <label for="quantidade"> Quantidade de participantes: </label>
-        <input type="number" id="quantidade" name="quantidade" required>
-
-        <button type="submit">Enviar</button>
-      </form>
-      <a href="cadastro.html"> Fazer outro cadastro</a>
+      <table>
+        <caption> informações</caption> 
+        <thead>
+          <tr>
+              <th scope="col"> Palestras</th>
+              <th scope="col"> Horarios</th>
+              <th scope="col"> Palestrantes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>Comunicações </td>
+              <td>9am</td>
+              <td>Luis ramirez</td>
+          </tr>
+          <tr>
+               <td>Futurismo Tecnologico</td>
+               <td>1pm</td>
+               <td>Fernando Guimaraes</td>            
+          </tr>
+          <tr>
+               <td> Lingua </td>
+               <td> 5pm </td>
+               <td> Luis Tapia </td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <section>
-        <h2> Regras do evento </h2>
-          <ul>
-            <li>Não levar coisas ilegais</li>
-            <li>Não alcohol</li>
-            <li>Não megafonos</li>
-          </ul> 
+      <form action="formulario.html" method="post">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="data">Data</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="quantidade">Participantes:</label>
+        <input type="number" id="quantidade" name="quantidade" required>
+        
+        <input type="checkbox" id="uno" name="temas" value="inicio">
+        <label for="uno">Tema inicio</label>
+
+        <input type="checkbox" id="dos" name="temas" value="intermedio">
+        <label for="dos">Tema intermedio</label>
+
+        <input type="checkbox" id="tres" name="temas" value="final">
+        <label for="tres">Tema final</label>
+
+        <input type="checkbox" id="cuatro" name="temas" value="outro">
+        <label for="cuatro">Outro tema</label>
+
+        <input type="radio" id="manha" name="turno" value="manha">
+        <label  for="manha">Manha</label>
+        
+        <input type="radio" id="tarde" name="turno" value="tarde">
+        <label for="tarde">Tarde</label> 
+
+        <input type="radio" id="noite" name="turno" value="noite">
+        <label for="noite">Noite</label>
+
+        <label for="palestra">Palestra: </label>
+         <select id="palestra" name="palestra"> 
+          <option value="Communicacoes">Comunicações</option>
+          <option value="Futurismo">Futurismo Tecnologico</option>
+          <option value="Lingua">Lingua</option>
+         </select>
+
+         <label for="indicacoes">Informe seus objetivos </label>
+         <textarea id="indicacoes" name="indicacoes" required></textarea>
+         
+         <button type="submit">Enviar </button>
+      </form> 
     </section>
-    <img src="evento.jpg" alt="Evento pop 2026">
   </main>
   <aside>
+      <img src="palestras.jpg" alt="Conheca sobre nossos temas a discernir">
+    </aside>
     <nav>
-       <a href="contato.html"> Para mais informações <br></a>
-       <a href="https://pagoseventos.com" target="_blank">Site para pagos</a>
+      <a href="https://ajuda.com" target="_blank">Precisa de ajuda?</a>
     </nav>
-  </aside>
-  <footer>
-       <p> Evento 2026<br> Organizado por Jóse José</p> 
-    </footer>
+    <a href="catalogo.html">Mais informações aqui</a> 
+  
+    <footer>
+      <p> Jose Jose <br> 2026</p>
+    </footer> 
  </body>
-</html>
+ </html> 
+
