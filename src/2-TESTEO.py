@@ -1,66 +1,56 @@
-import sqlite3
-from flask import Flask, render_template,request, redirect, url_for
+print("Joginho das torres")
+print("torre A: 5,4,3,2,1" \
+" torre B: " \
+" torre C: ")
+torre_a=[5,4,3,2,1]
+torre_b=[]
+torre_c = []
+torres = {
+    "A": torre_a,
+    "B": torre_b,
+    "C": torre_c       
+}   
 
-app = Flask(__name__)
-def banco_novo():
-   conexao = sqlite3.connect("validacao.db")
-   cursor = conexao.cursor()
+def mover_disco(origem, destino):
+   if not origem:             #primeiro verifica erro e so depois mexe
+       return False
 
-   cursor.execute(
-        "CREATE TABLE IF NOT EXISTS usuarios"
-        "(id INTEGER PRIMARY KEY AUTOINCREMENT,"
-        "nome TEXT,"
-        "idade INTEGER)"
-   )
-   conexao.commit()
-   conexao.close()
-@app.route("/cadastro", methods=["GET", "POST"])
-def cadastro():
-    if request.method == "POST":
-      nome = request.form.get("nome", "").strip()
-      idade_texto = request.form.get("idade", "").strip()
+   if destino and origem[-1] > destino[-1]:
+       return False
+    
+   disco = origem.pop()       #mexer discos
+   destino.append(disco)
 
-      if not nome:
-        mensagem = "Digite um nome"
-        return render_template("cadastro.html", mensagem=mensagem)
+   return True
 
-      try :
-         idade = int(idade_texto)
-      except ValueError:
-         mensagem = "Idade Invalida"
-         return render_template("cadastro.html", mensagem=mensagem)
+# print(mover_disco(torre_a,torre_b)) #Antes dos outros prints
+# print(mover_disco(torre_a,torre_b))
+movimentos = 0
 
-      if idade < 0 or idade >120:
-         mensagem = "Idade fora do intervalo"
-         return render_template("cadastro.html", mensagem=mensagem)
-   
-      conexao = sqlite3.connect("validacao.db")
-      cursor = conexao.cursor()
-      cursor.execute(
+while True:
 
-         "INSERT INTO usuarios (nome, idade) VALUES (?,?)",
-         (nome, idade),
-      )
-      conexao.commit()
-      conexao.close()
-      return redirect(url_for("usuarios"))
-    return render_template("cadastro.html")
+    origem_escolhida= input("Escolha origem: A, B ou C: ").strip().upper()
+    destino_escolhido= input("Escolha destino: A, B ou C: ").strip().upper()
+
+    
+    if not origem_escolhida or not destino_escolhido:
+        print("Não deixe campos vazios")
+        continue 
+    if origem_escolhida not in torres or destino_escolhido not in torres :
+        print("Torre invalida")
+        continue 
+    origem= torres[origem_escolhida]
+    destino=torres[destino_escolhido]
 
 
-@app.route("/usuarios")
-def usuarios():
-   conexao = sqlite3.connect("validacao.db")
-   cursor = conexao.cursor()
 
-   cursor.execute(
+    if mover_disco(origem, destino):
+        movimentos= movimentos + 1
+        print("Numero de jogadas:", movimentos) 
+    if torre_c == [5, 4, 3, 2, 1]:
+        print("Voce ganhou")
+        break    
 
-       "SELECT nome, idade FROM usuarios"
-   )
-
-   dados = cursor.fetchall()
-   conexao.close()
-   return render_template("usuarios.html", dados=dados)
-if __name__=="__main__":
-   banco_novo()
-   app.run()
-   
+    print("Torre A: ",torre_a)              
+    print("Torre B: ", torre_b)
+    print("Torre C: ", torre_c)
